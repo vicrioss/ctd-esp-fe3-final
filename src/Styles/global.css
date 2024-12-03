@@ -1,0 +1,29 @@
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.dark {
+    background-color:  #000000;
+    color: #ffffff;
+  }
+  
+  .container {
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .button-dark {
+    background-color: #080808;
+  }

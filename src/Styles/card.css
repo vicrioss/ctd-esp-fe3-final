@@ -1,0 +1,34 @@
+
+
+  .card:hover{
+    border: 0.5px solid rgb(206, 217, 142);
+  }
+
+  .card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: stretch;
+    width: 200px;
+    padding:10px;
+    gap: 1rem;
+    border: 1px solid rgb(136, 136, 136);
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .card-img {
+    width: 100%;           
+    height: 150px;       
+    object-fit: cover;    
+    border-radius: 8px;
+  }

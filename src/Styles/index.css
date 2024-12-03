@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.favButton{
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+h1{
+  text-align: center;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+a:hover{
+  color: rgb(136, 136, 136);
+} 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 50px auto;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.contact-container h2 { 
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-container.dark {
+  background-color: #333;
+  color: white;
+}
+
+
+.contact-container.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+
+.grilla h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px; 
+}
+
+.grilla {
+  display: flex;
+  flex-wrap: wrap;                   
+  justify-content: center;    
+  align-items: center;
+  gap: 1rem;
+  padding: 30px;
+  margin: 0 auto;
+}
+table {
+ border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.dark{
+  background-color: #000000c2;
+  color: white;
+}
+.dark > a {
+  color: white;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container h2 {
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  font-weight: bold;
+}
+
+.detail-value a {
+  color: #5ba0e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.detail-value a:hover {
+  text-decoration: underline;
+}
