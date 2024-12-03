@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../Components/utils/global.context.jsx";
 
 const Home = () => {
-  const { state } = useGlobalContext();
-  const { data: dentistas } = state;
+  const { state, dispatch } = useGlobalContext();
+  const { data: dentistas, favoritos } = state;
 
-  const agregarFavorito = (dentista) => {
-    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-    if (!favoritos.some((fav) => fav.id === dentista.id)) {
-      favoritos.push(dentista);
-      localStorage.setItem("favoritos", JSON.stringify(favoritos));
+  const handleFav = (dentista) => {
+    const isFavorito = favoritos.some((fav) => fav.id === dentista.id);
+    if (isFavorito) {
+      dispatch({ type: "REMOVE_FAV", payload: dentista.id });
+    } else {
+      dispatch({ type: "ADD_FAV", payload: dentista });
     }
   };
 
@@ -21,10 +22,14 @@ const Home = () => {
       ) : (
         dentistas.map((dentista) => (
           <div className="card" key={dentista.id}>
-            <img src="/images/doctor.jpg" alt='wpp' />
+            <img src="/images/doctor.jpg" alt="wpp" />
             <Link to={`/dentista/${dentista.id}`}>{dentista.name}</Link>
             <p>{dentista.username}</p>
-            <button onClick={() => agregarFavorito(dentista)}>⭐</button>
+            <button onClick={() => handleFav(dentista)}>
+              {favoritos.some((fav) => fav.id === dentista.id)
+                ? "❌ Eliminar"
+                : "⭐ Agregar"}
+            </button>
           </div>
         ))
       )}
