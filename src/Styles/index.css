@@ -25,7 +25,8 @@ h1{
 }
 
 a{
-  color: #000;
+  color: rgb(17, 84, 88);
+  font-weight: bold;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -67,13 +68,10 @@ a:hover{
   color: white;
 }
 
-
 .contact-container.light {
   background-color: #f9f9f9;
   color: #333;
 }
-
-
 
 .grilla h1 {
   text-align: center;
@@ -113,8 +111,10 @@ tr:nth-child(even) {
   background-color: #000000c2;
   color: white;
 }
-.dark > a {
-  color: white;
+
+.dark a{
+  color: rgb(149, 234, 240);
+  font-weight: bold;
 }
 
 .detail-container {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../Components/utils/global.context"; // Importa el contexto
+import { useGlobalContext } from "../Components/utils/global.context";
 import "../Styles/card.css";
 
 const Card = ({ name, username, id, imageUrl }) => {
@@ -10,7 +10,7 @@ const Card = ({ name, username, id, imageUrl }) => {
 
   const handleFav = () => {
     if (isFavorito) {
-      dispatch({ type: "REMOVE_FAV", payload: id }); // Eliminar si ya está en favoritos
+      dispatch({ type: "REMOVE_FAV", payload: id });
     } else {
       dispatch({
         type: "ADD_FAV",
